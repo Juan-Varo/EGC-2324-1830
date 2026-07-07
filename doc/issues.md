@@ -11,7 +11,7 @@ Autenticación
     * Autenticación por certificado digital (A)
     * Autenticación con redes sociales (M)
     * Autenticación LDAP externo (M)
-    * Registro de usuarios. Formulario de registro que crea nuevos usuarios
+    * Registro de usuarios. Formulario de registro que crea nuevos usuarios (F)
     * Creación de API para usuarios
     * Autenticación con OAuth
 
