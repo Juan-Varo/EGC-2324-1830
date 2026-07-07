@@ -5,10 +5,13 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy: 
+      matrix: 
+        postgres-version: [14.9,15]
 
     services:
       postgres:
-        image: postgres:14.9
+        image: postgres:${{matrix.postgres-version}}
         env:
           POSTGRES_USER: decide
           POSTGRES_PASSWORD: decide
@@ -42,10 +45,13 @@ jobs:
   cobertura:
     runs-on: ubuntu-latest
     needs: build # <-- ESTO une los dos bloques de forma secuencial
+    strategy: 
+      matrix: 
+        postgres-version: [14.9,15]
 
     services:
       postgres:
-        image: postgres:14.9
+      image: postgres:${{ matrix.postgres-version }}
         env:
           POSTGRES_USER: decide
           POSTGRES_PASSWORD: decide
