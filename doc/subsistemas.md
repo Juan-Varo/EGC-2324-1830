@@ -23,7 +23,7 @@ Posibles formas de autenticación:
     * Enlace único por correo electrónico
     * Enlace único por SMS o sistema de mensajería (whatsapp, telegram, etc)
     * Certificado FNMT
-    * Redes sociales (twitter, facebook, google)
+    * Redes sociales (twitter, facebook, google, instagram, threads)
 
 Censo
 -----
