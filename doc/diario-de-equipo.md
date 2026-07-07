@@ -14,6 +14,7 @@
 * Romero Caro, Manuel Antonio (manromcar2@alum.us.es) <br>
 * Toledo Mayorga, Alberto (albtolmay@alum.us.es) <br>
 * Vera Casal, Borja (borvercas@alum.us.es) <br>
+* Varo Vera, Juan (juavarver@alum.us.es) <br>
 
 # Resumen
 
