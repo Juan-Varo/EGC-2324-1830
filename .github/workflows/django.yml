@@ -43,7 +43,7 @@ jobs:
         cd decide
         python manage.py test --keepdb
 
-        
+
   cobertura:
 
     runs-on: ubuntu-latest
