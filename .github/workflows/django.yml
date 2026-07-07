@@ -32,7 +32,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        sed -i 's/collections.Callable/collections.abc.Callable/g' /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/nose/suite.py
+        
+        # Parche dinámico para corregir 'collections.Callable' en toda la librería nose
+        NOSE_DIR=$(python -c "import nose, os; print(os.path.dirname(nose.__file__))")
+        find "$NOSE_DIR" -name "*.py" -exec sed -i 's/collections.Callable/collections.abc.Callable/g' {} +
+        
         cp decide/local_settings.gactions.py decide/local_settings.py
     - name: Run migrations (unnecessary)
       run: |
@@ -74,7 +78,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install coverage codacy-coverage
-        sed -i 's/collections.Callable/collections.abc.Callable/g' /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/nose/suite.py
+        
+        # Parche dinámico para corregir 'collections.Callable' en toda la librería nose
+        NOSE_DIR=$(python -c "import nose, os; print(os.path.dirname(nose.__file__))")
+        find "$NOSE_DIR" -name "*.py" -exec sed -i 's/collections.Callable/collections.abc.Callable/g' {} +
+        
         cp decide/local_settings.gactions.py decide/local_settings.py
     - name: Run migrations (unnecessary)
       run: |
